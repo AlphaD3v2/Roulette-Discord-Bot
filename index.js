@@ -3,6 +3,7 @@ const { ButtonBuilder, EmbedBuilder, ButtonStyle, CommandInteraction, Attachment
 const { createButtonRows, editButton, commands, emojis, sleep } = require('./utils.js');
 const { startTime, chooseTimeout, timeBetweenRounds } = require('./config.json');
 const { createWheel } = require('./wheel.js');
+const TOKEN = 'your_bot_token_here';
 const Discord = require('discord.js');
 const http = require('http');
 http
@@ -34,7 +35,7 @@ client.on('ready', async () => {
   }
 
   console.log('I am ready!');
-  console.log('Bot By Wick Studio');
+  console.log('Bot By Sadek')
 });
 
 client.on('interactionCreate', async (interaction) => {
@@ -315,4 +316,4 @@ const startGame = async (interaction, start = false) => {
   }
 };
 
-client.login(process.env.TOKEN);
+client.login(TOKEN);
